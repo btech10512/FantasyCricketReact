@@ -1,0 +1,153 @@
+:root {
+  --primary: #00d2ff;
+  --secondary: #3a7bd5;
+  --bg-dark: #0f172a;
+  --card-bg: #1e293b;
+  --text-main: #f8fafc;
+  --accent: #f59e0b;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  /* Add this fallback color */
+  color: #00d2ff; 
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Only make it transparent if the background-clip is supported */
+  -webkit-text-fill-color: transparent; 
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  font-weight: 800;
+  position: relative;
+  z-index: 10;
+}
+
+/* Search Bar */
+.search-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Layout Grid */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+}
+
+/* Player Cards */
+.player-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.player-card {
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.role-badge {
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #334155;
+  text-transform: uppercase;
+}
+
+/* Sidebar / Team View */
+.sidebar {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  height: sticky;
+  top: 20px;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 8px;
+  background: #0f172a;
+  border-radius: 6px;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-add {
+  background: var(--primary);
+  color: white;
+  margin-top: 10px;
+}
+
+.btn-add:disabled {
+  background: #475569;
+  cursor: not-allowed;
+}
+
+.btn-remove {
+  background: #ef4444;
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+}
+
+.btn-confirm {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to right, #10b981, #059669);
+  color: white;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.btn-confirm:disabled {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+.selected-player-item{
+  display: flex;
+  gap: 5px;
+}
