@@ -80,7 +80,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>ELITE XI SELECTOR</h1>
+      <h1>Sapno ka 11 (RAJA BHAIYA)</h1>
 
       <input
         type="text"
